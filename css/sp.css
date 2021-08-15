@@ -1,0 +1,880 @@
+@charset "UTF-8";
+/* 
+========================================
+全体の初期設定
+========================================
+*/
+* {
+  text-decoration: none;
+  list-style: none;
+}
+/* float解除設定準備 */
+.clearfix {
+  content: "";
+  display: block;
+  clear: both;
+}
+/* コンテナの設定 */
+.container {
+  padding: 0 30px;
+  margin: 0 auto;
+  max-width: 1366px;
+}
+/* フォント設定 */
+body {
+  color: #3a3a3a;
+}
+h2 {
+  font-size: 20px;
+  letter-spacing: 1.5px;
+}
+.txtLayout {
+  display: inline;
+}
+.ja {
+  font-family: 'Sawarabi Mincho', sans-serif;
+}
+.en {
+  font-family: 'Cormorant Garamond', serif;
+}
+/* 画像のブロック要素化 */
+img {
+  display: block;
+}
+/* aタグのブロック要素化 */
+a {
+  display: block;
+}
+/* スムーズスクロール設定 */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 
+========================================
+ヘッダーの設定
+========================================
+ */
+header {
+  background-color: transparent;
+  color: #1f2331;
+  width: 100%;
+  height: 44px;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  transition: 0.5s;
+}
+/* ウィンドウをスクロールした際に背景色と文字色を変更する設定 */
+header.active {
+  background-color: #1f2331;
+  color: #fff;
+  opacity: 1;
+}
+.headerG {
+  display: flex;
+  justify-content: space-between;
+}
+.headerLogo img {
+  width: 61px;
+  height: 24px;
+}
+.headerLogo {
+  margin-top: 10px;
+  position: relative;
+}
+.headerLogo a:first-child {
+  position: absolute;
+  transition: 0.5s;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+ .headerLogo a:first-child.active {
+  opacity: 1;
+} 
+/* レスポンシブ用ハンバーガーメニューボタン設定 */
+.nav_toggle {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  width: 1.75rem;
+  height: 44px;
+  color: #fff;
+}
+.nav_toggle i {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #383b46;
+  position: absolute;
+  transition: all 0.5s;
+}
+/* ウィンドウがスクロールされた際のハンバーガーメニューボタン背景色の変更 */
+.nav_toggle i.active {
+  background-color: #fff;
+}
+.nav_toggle i:nth-child(1) {
+  top: 13px;
+  margin-top: -1px;
+}
+.nav_toggle i:nth-child(2) {
+  top: 22px;
+  margin-top: -1px;
+}
+.nav_toggle i:nth-child(3) {
+  top: 31px;
+  margin-top: -1px;
+}
+/* ハンバーガーメニューボタンがクリックされた際のボタンの変形設定 */
+.nav_toggle.show i:nth-child(1) {
+  transform: translateY(6px) rotate(-45deg);
+}
+.nav_toggle.show i:nth-child(2) {
+  opacity: 0;
+}
+.nav_toggle.show i:nth-child(3) {
+  transform: translateY(-12px) rotate(45deg);
+}
+.headerMenu {
+  position: absolute;
+  right: -450px;
+  height: 100vh;
+  background-color: black;
+  padding-top: 73px;
+  width: 40%;
+}
+.headerMenu a {
+  color: white;
+  font-size: 22px;
+  line-height: 73px;
+  padding: 0 15px;
+}
+/* 該当ページのメニュー項目背景色を設定 */
+#index #navTop,
+#concept #navConcept,
+#product #navProduct,
+#product01 #navProduct,
+#product02 #navProduct,
+#product03 #navProduct,
+#product04 #navProduct,
+#news #navNews,
+#news04 #navNews,
+#news05 #navNews,
+#news06 #navNews,
+#store #navStore,
+#contact #navContact{
+  background-color: rgba(255, 255, 255, 0.5);
+}
+#index #navTop a,
+#concept #navConcept a,
+#product #navProduct a,
+#news #navNews a,
+#store #navStore a,
+#contact #navContact a {
+  color: #fff;
+}
+
+/* 
+========================================
+フッターの設定
+========================================
+*/
+.gFooter {
+  background-color: #1f2331;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  padding-top: 35px;
+  padding-bottom: 30px;
+}
+.teturnTop {
+  text-align: center;
+  margin: 80px auto 50px;
+  padding-top: 50px;
+}
+.teturnTop a {
+  color: #383b46;
+  opacity: 0.5;
+  display: inline-block;
+}
+.copyRight {
+  font-size: 18px;
+  font-family: 'Cormorant Garamond', serif;
+}
+.iconGp {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 25px;
+}
+.iconGp li {
+  margin: 0 10px;
+}
+.iconGp a {
+  color: #fff;
+}
+
+/* 
+========================================
+トップページ: メインビジュアル設定
+========================================
+*/
+/* slick画像の停止を防ぐため、ポインターイベントを解除 */
+.mainVisual {
+  pointer-events: none;
+}
+.mainVisual a {
+  color: #ffcc33;
+  text-decoration: none;
+  position: relative;
+}
+.mainVisual .mainVs01,
+.mainVisual .mainVs02
+ {
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.mainVisual .mainVs01 {
+  background-image: url(../images/mainVsTop01.jpg);
+  background-position: center center;
+}
+.mainVisual .mainVs02 {
+  background-image: url(../images/mainVsTop02.jpg);
+  background-position: center center;
+}
+.mainVisual h1 {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 9vw;
+}
+.mainVisual span {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 7.6vw;
+  margin-left: 13px;
+}
+.mainVs01 h1 {
+  position: absolute;
+  bottom: 32%;
+  left: 50%;
+  margin-left: -162.3px;
+  line-height: 100%;
+  text-align: center;
+}
+.mainVs02 h1 {
+  position: absolute;
+  top: 13%;
+  left: 45%;
+  margin-left: -162.3px;
+  line-height: 100%;
+  text-align: center;
+}
+.mainVisualGuide {
+  position: relative;
+}
+.fa-angle-double-down {
+  animation: guideAnimation 1.5s infinite linear;
+  position: absolute;
+  bottom: 4%;
+  margin-left: -15px;
+  left: 50%;
+  color: #ffcc33;
+}
+@keyframes guideAnimation {
+  0% {
+    bottom: 4%;
+  }
+  50% {
+    bottom: 3%;
+  }
+  100% {
+    bottom: 4%;
+  }
+}
+
+/*
+========================================
+トップページ: コンセプトセクション設定
+========================================
+*/
+#conceptS {
+  background-image: url(../images/conceptVsTop.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  height: 230px;
+  position: relative;
+}
+#conceptS #conceptContents {
+  padding-bottom: 30px;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+#conceptS h2 {
+  padding-top: 30px;
+  padding-bottom: 5px;
+  margin: 0 auto;
+  border-bottom: 1px solid #3a3a3a;
+  width: 120px;
+}
+#conceptS p {
+  padding-top: 30px;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+}
+.conceptAnc {
+  color: #3a3a3a;
+}
+
+/*
+========================================
+トップページ: プロダクトセクション設定
+========================================
+*/
+#productS {
+  width: 100%;
+  color: #3a3a3a;
+  background-color: #fff;
+  text-align: center;
+  margin: 0 auto;
+  padding: 44px 50px 0;
+  height: 100%;
+  position: relative;
+}
+.productImages {
+  margin: 0 auto;
+  padding-top: 30px;
+}
+.productImages img {
+  width: 200px;
+  height: 200px;
+}
+.productImages a {
+  display: inline-block;
+  margin : 0 20px;
+}
+/* moreボタン調整 */
+#productS .transBtn {
+  margin-top: 30px;
+  margin-bottom: 0px;
+}
+
+/*
+========================================
+トップページ: サブセクション設定
+========================================
+*/
+.sub {
+  position: relative;
+  background-color: #fff;
+  color: #3a3a3a;
+  text-align: left;
+  margin: 0 auto;
+  height: 100%;
+}
+  #newsS, #storeS {
+    font-size: 18px;
+    width: 100%;
+    padding-top: 64px;
+}
+.newsList, .storeInfo {
+  margin-top: 30px;
+}
+
+/* 
+========================================
+トップページ: ニュースセクション詳細設定
+========================================
+*/
+#newsS h2 {
+  text-align: center;
+}
+.newsList {
+  width: 300px;
+}
+.newsAtcl {
+  margin-bottom: 1.5em;
+  line-height: 1.25em;
+}
+.newsAtcl a {
+  display: block;
+  color: #3a3a3a;
+}
+.NewsDtl {
+  margin-top: 5px;
+}
+.newsTag {
+  color: #dbb725;
+  font-weight: bold;
+}
+time {
+  margin-right: 10px;
+}
+
+/*
+========================================
+トップページ: ストアセクション詳細設定
+========================================
+*/
+#storeS h2 {
+  text-align: center;
+}
+#storeS {
+  position: relative;
+}
+.storeInfo img {
+  width: 100%;
+  height: auto;
+}
+.storeDetail {
+  line-height: 1.4em;
+  margin-top: 20px;
+}
+.storeName p:nth-child(1) {
+  font-size: 24px;
+}
+.storeDetail div {
+  margin-bottom: 15px;
+}
+/* Mapボタン調整 */
+#storeImg .transBtn {
+  position: absolute;
+  top: 580px;
+  margin-bottom: 0;
+}
+
+/* 
+========================================
+トップページ：共通遷移ボタン設定
+========================================
+*/
+.transBtn {
+  display: inline-block;
+  background-color: #fff;
+  color: #383b46;
+  font-size: 18px;
+  font-weight: bold;
+  border: 1px solid #383b46;
+  padding:2px 10px;
+}
+
+/* 
+========================================
+コンセプトページ設定
+========================================
+*/
+#conceptVisual {
+  height: 880px;
+  width: 100vw;
+  background-image: url(../images/conceptVs.jpg);
+  background-size: cover;
+  background-position: center center;
+  opacity: 0.95;
+}
+#conceptVisual .conceptLogo {
+  margin: 0 auto;
+  padding-top: 120px;
+}
+#conceptVisual h2 {
+  color: #fff;
+  text-align: center;
+  font-size: 30px;
+  margin-top: 15px;
+  margin-bottom: 50px;
+}
+#conceptVisual p {
+  color: #fff;
+  text-align: left;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+#concept footer {
+  position: relative;
+  height: 146.5px;
+}
+#concept .teturnTop {
+  position: absolute;
+  top: -210px;
+  text-align: center;
+  left: 50%;
+  margin-left: -14px;
+}
+#concept .teturnTop a {
+  color: #fff;
+}
+
+/* 
+========================================
+プロダクトページ設定
+========================================
+*/
+#productVisual {
+  height: 600px;
+  width: 100vw;
+  background-image: url(../images/productVs02.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#productVisual h1 {
+  color: #fff;
+  margin: 20px auto 0;
+  display: inline-block;
+  text-align: center;
+  font-size: 45px;
+}
+#product h2 {
+  color: #595959;
+  text-align: center;
+  width: 100%;
+  margin: 80px auto 70px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #595959;
+}
+#productList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+#productList a {
+  color: #3a3a3a;
+  margin: 0 auto 30px;
+}
+#productList .item {
+  border: 1px solid #e6e6e6;
+  margin-bottom: 0 -2px -2px 0;
+}
+#productList .item .itemDescription {
+  text-align: center;
+  max-width: 275px;
+  padding: 30px 10px;
+}
+#productList .item .itemDescription>p:first-child {
+  color: #999;
+  margin-bottom: 10px;
+}
+#productList img {
+  width: 275px;
+  height: 275px;
+}
+
+/* 
+========================================
+プロダクト詳細ページ設定
+========================================
+*/
+.productDtlImg {
+  margin: 50px auto 30px;
+}
+.productDtlImg img {
+  margin: 0 auto;
+  width: 275px;
+  height: 275px;
+}
+.dtlDescription {
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+.dtlDescription p {
+text-align: center;
+border-bottom: 1px solid #ddd;
+padding-top: 30px;
+padding-bottom: 30px;
+}
+.dtlDescription .txt p {
+  border-bottom: none;
+  text-align: left;
+}
+
+/* 
+========================================
+ニュースページ設定
+========================================
+*/
+#newsVisual {
+  text-align: center;
+  padding-top: 110px;
+  margin-bottom: 100px;
+}
+#newsVisual h1 {
+  font-size: 45px;
+  color: #595959;
+  text-align: center;
+  width: 335px;
+  margin: 0 auto;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #595959;
+}
+#newsList {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+#newsList a {
+  width: 46.3636%;
+  max-width: 300px;
+  margin-right: 7.2727%;
+  margin-bottom: 30px;
+}
+#newsList a:nth-child(2n) {
+  margin-right: 0;
+}
+#newsList #newsImg {
+  border: 1px solid #e6e6e6;
+}
+#newsList #newsImg img {
+  margin: 30% auto;
+  width: 40%;
+  height: auto;
+}
+#newsList  #article #articleDescription {
+  color: #3a3a3a;
+  margin-top: 25px;
+}
+#newsList  #article #articleDescription span {
+  display: block;
+  color: #dbb725;
+}
+
+/* 
+========================================
+ニュース詳細ページ設定
+========================================
+*/
+.newsContent {
+  width: 275px;
+  margin: 0 auto;
+  padding-bottom: 100px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+.newsContent p:first-child {
+  text-align: center;
+}
+.newsContent .newsDate {
+  color: #6d7a86;
+}
+.newsContent p:nth-child(n+2):nth-child(-n+6) {
+  margin-top: 40px;
+}
+.newsContent a {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 5px 10px; 
+  background-color: #383b46;
+  color: #fff; 
+  border-radius: 5px;
+}
+
+/* 
+========================================
+各詳細ページ共通設定: プロダクト詳細/ ニュース詳細
+========================================
+*/
+.dtlBtn {
+  width: 275px;
+  margin: 0 auto;
+  position: relative;
+  padding-top: 30px;
+  letter-spacing: 0.6px;
+  text-align: center;
+  font-size: 16px;
+}
+.dtlBtn a {
+  color: #6d7a86;
+  border-bottom: 1px solid rgba(140, 150, 160, 0.5);
+  display: inline-block;
+}
+.dtlBtn .prev {
+  position: absolute;
+  left: 0;
+}
+.dtlBtn .next {
+  position: absolute;
+  right: 0;
+}
+.dtlVisual {
+  text-align: center;
+  padding-top: 110px;
+  margin-bottom: 20px;
+}
+.dtlVisual h1 {
+  font-size: 20px;
+  color: #8c8c8c;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #595959;
+}
+
+/* 
+========================================
+ストアページ設定
+========================================
+*/
+#storeVisual {
+  text-align: center;
+  padding-top: 110px;
+  margin-bottom: 60px;
+}
+#storeVisual h1 {
+  font-size: 45px;
+  color: #595959;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto 60px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #595959;
+}
+#storeVisual h2 {
+  font-size: 45px;
+  line-height: 30px;
+}
+#storeVisual h2 span {
+  font-size: 13px;
+}
+#storeInfo .map {
+  width: 315px;
+  position: relative;
+  padding-top: 100%;
+  margin: 0 auto;
+}
+#storeInfo .map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#storeInfo #accessDtl {
+  margin-top: 20px;
+  padding-left: 0;
+}
+#storeInfo #accessDtl p{
+  margin-bottom: 15px;
+}
+#storeInfo #accessDtl p:nth-child(3) {
+  font-size: 13px;
+}
+#storeInfo #accessDtl p:nth-child(3) span {
+  margin-left: 1em;
+}
+
+/* 
+========================================
+コンタクトページ設定
+========================================
+*/
+#contactVisual {
+  text-align: center;
+  padding-top: 110px;
+  margin-bottom: 60px;
+}
+#contactVisual h1 {
+  font-size: 45px;
+  color: #595959;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto 60px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #595959;
+}
+#contactFormBox {
+  width: 87%;
+  margin: 0 auto;
+}
+#contactForm {
+  display: block;
+  margin: 0 auto;
+}
+#contactForm>p {
+  margin-bottom: 40px;
+  width: 275px;
+}
+.formRow {
+  margin-bottom: 20px;
+}
+.baseInput input {
+  width: 100%;
+  border: 1px solid rgba(167,167,167,.5);
+  font-size: 14px;
+  height: 32px;
+  line-height: 30px;
+  padding: 5px;
+}
+.formLayout {
+  margin-bottom: 45px;
+}
+.formLeft {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 285px;
+  padding-top: 5px;
+  padding-right: 10px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  letter-spacing: 1.6px;
+}
+.formLeft::after {
+  content: ":";
+}
+.formLeft span {
+  color: #cd0000;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 11px;
+}
+.formRight1 {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0%;
+}
+.formRight1 li {
+  display: inline-block;
+  width: 217px;
+  margin-right: 68px;
+  margin-bottom: 10px;
+}
+.formRight1 span {
+  font-size: 14px;
+  padding-right: 12px;
+  text-align: left;
+  letter-spacing: 1px;
+}
+.formRight2 {
+  width: 275px;
+}
+.formRight3 {
+  width: 220px;
+}
+.formRight4 textarea {
+  width: 275px;
+  height: 230px;
+  border: 1px solid rgba(167,167,167,.5);
+  font-size: 14px;
+  line-height: 30px;
+  padding: 5px;
+}
+#contact form input[type="submit"] {
+  display: block;
+  margin: 0 auto;
+  background-color: #383b46;
+  color: #fff;
+  padding: 20px 60px;
+  font-size: 14px;
+  transition: all 0.5s;
+}

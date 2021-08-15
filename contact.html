@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- タイトル -->
+  <title>| お問合せ | マトイ</title>
+
+  <!-- ディスクリプション/キーワード -->
+  <meta name=”description” content=”自分らしさを身に纏う、ジェンダーレスアクセサリーブランドmatoi。お問い合わせページです。ご不明な点がございましたらお問い合わせください”> 
+  <meta name="keywords" content="matoi,マトイ,genderless,ジェンダーレス,gender neutral,ジェンダーニュートラル,accessories,アクセサリー,jewerly,ジュエリー,ring,リング,earrings,ピアス,イヤリング,necklace,ネックレス,gold,ゴールド,silver,シルバー,brass,真鍮">
+
+  <!-- ブラウザ設定の初期化 -->
+  <link rel="stylesheet" href="css/ress.css">
+
+  <!-- favicon要求を回避 -->
+  <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+
+  <!-- google fonts取得 -->
+  <!-- セリフ体 -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
+  <!-- 明朝体 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+
+  <!-- slickプラグイン用css読み込み -->
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/slick-theme.css">
+
+  <!-- style.css読み込み -->
+  <!-- スマホ -->
+  <link rel="stylesheet" href="css/sp.css" media="only screen and (max-width: 640px)">
+  <!-- タブレット -->
+  <link rel="stylesheet" href="css/tb.css" media="only screen and (min-width: 641px) and (max-width: 1039px)" >
+  <!-- デスクトップ -->
+  <link rel="stylesheet" href="css/style.css" media="only screen and (min-width: 1040px)">
+  
+  <!-- icon画像取得 -->
+  <script src="https://kit.fontawesome.com/c1b04e277a.js" crossorigin="anonymous"></script>
+  
+  <!-- jquery読み込み -->
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/main.js"></script>
+</head>
+
+<body id="contact">
+  <header id="top">
+    <div class="container">
+      <div class="headerG">
+        <h1 class="headerLogo">
+          <a href="index.html"><img src="images/logo01.png"></a>
+          <a href="index.html"><img src="images/logo02.png"></a>
+        </h1>
+        <nav class="headerMenu">
+          <ul>
+            <li id="navTop"><a href="index.html" class="en">Top</a></li>
+            <li id="navConcept"><a href="concept.html" class="en">Concept</a></li>
+            <li id="navProduct"><a href="product.html" class="en">Product</a></li>
+            <li id="navNews"><a href="news.html" class="en">News</a></li>
+            <li id="navStore"><a href="store.html" class="en">Store</a></li>
+            <li id="navContact"><a href="#contact" class="en">Contact</a></li>
+          </ul>
+        </nav>
+        <span class="nav_toggle">
+          <i></i>
+          <i></i>
+          <i></i>
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div id="contactVisual">
+        <h1 class="en">Contact</h1>
+      </div>
+      <div id="contactFormBox">
+        <form id="contactForm" action="#" method="POST">
+          <p>下記フォームに必要事項を入力の上、確認ボタンを押してください。</p>
+          <div class="formLayout">
+            <div class="formRow">
+              <p class="formLeft">お名前<span>必須</span></p>
+              <div class="baseInput formRight1">
+                <ul>
+                  <li><label for="lastName"><span>姓</span></label><input type="text" name="lastName" id="lastName" required></li>
+                  <li><label for="firstName"><span>名</span></label><input type="text" name="firstName" id="firstName" required></li>
+                </ul>
+              </div>
+            </div>
+            <div class="formRow">
+              <p class="formLeft">お名前（かな）</p>
+              <div class="baseInput formRight1">
+                <ul>
+                  <li><label for="lastNameKana"><span>せい</span></label><input type="text" name="lastNameKana" id="lastNameKana"></li>
+                  <li><label for="firstNameKana"><span>めい</span></label><input type="text" name="firstNameKana" id="firstNameKana"></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="formLayout">
+            <div class="formRow">
+              <p class="formLeft">
+                <label for="email">メールアドレス<span>必須</span></label>
+              </p>
+              <div class="baseInput formRight2">
+                <input type="email" name="email" id="email" required>
+              </div>
+            </div>
+            <div class="formRow">
+              <p class="formLeft">
+                <label for="emailCheck">メールアドレス（確認用）<span>必須</span></label>
+              </p>
+              <div class="baseInput formRight2">
+                <input type="email" name="emailCheck" id="emailCheck" required>
+              </div>
+            </div>
+          </div>
+          <div class="formLayout">
+            <div class="formRow">
+              <p class="formLeft">
+                <label for="tel">電話番号</label>
+              </p>
+              <div class="baseInput formRight3">
+                <input type="tel" name="tel" id="tel">
+              </div>
+            </div>
+          </div>
+          <div class="formLayout">
+            <div class="formRow">
+              <p class="formLeft">
+                <label for="comment">本文<span>必須</span></label>
+              </p>
+              <div class="formRight4">
+                <textarea name="comment" id="comment" required></textarea>
+              </div>
+            </div>
+          </div>
+          <input type="submit" value="送信する">
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="teturnTop">
+      <a href="#contact">
+        <i class="fas fa-chevron-up fa-2x"></i>
+      </a>
+    </div>
+    <div class="gFooter">
+      <ul class="iconGp">
+        <li><a href="#"><i class="fab fa-facebook-square fa-2x"></i></a></li>
+        <li><a href="#"><i class="fab fa-twitter fa-2x"></i></i></a></li>
+        <li><a href="#"><i class="fab fa-instagram fa-2x"></i></a></li>
+      </ul>
+      <p class="copyRight en">&copy;matoi, Ltd. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
