@@ -32,10 +32,10 @@ h2 {
   display: inline;
 }
 .ja {
-  font-family: 'Sawarabi Mincho', sans-serif;
+  font-family: "Sawarabi Mincho", sans-serif;
 }
 .en {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
 }
 /* 画像のブロック要素化 */
 img {
@@ -44,10 +44,6 @@ img {
 /* aタグのブロック要素化 */
 a {
   display: block;
-}
-/* スムーズスクロール設定 */
-html {
-  scroll-behavior: smooth;
 }
 
 /* 
@@ -59,7 +55,7 @@ header {
   background-color: transparent;
   color: #1f2331;
   width: 100%;
-  height: 44px;
+  height: 73px;
   position: fixed;
   top: 0;
   z-index: 10;
@@ -75,83 +71,45 @@ header.active {
   display: flex;
   justify-content: space-between;
 }
-.headerLogo img {
-  width: 61px;
-  height: 24px;
-}
 .headerLogo {
   margin-top: 10px;
   position: relative;
+}
+.headerLogo img {
+  width: 70%;
 }
 .headerLogo a:first-child {
   position: absolute;
   transition: 0.5s;
   opacity: 0;
-  top: 0;
+  top: 5px;
   left: 0;
   z-index: 10;
 }
- .headerLogo a:first-child.active {
+.headerLogo a:nth-child(2) {
+  margin-top: 5px;
+}
+.headerLogo a.active {
   opacity: 1;
-} 
-/* レスポンシブ用ハンバーガーメニューボタン設定 */
+}
+/* レスポンシブ用ハンバーガーメニューボタン（PC上は非表示） */
 .nav_toggle {
-  display: block;
-  cursor: pointer;
-  position: relative;
-  width: 1.75rem;
-  height: 44px;
-  color: #fff;
+  display: none;
 }
-.nav_toggle i {
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: #383b46;
-  position: absolute;
-  transition: all 0.5s;
-}
-/* ウィンドウがスクロールされた際のハンバーガーメニューボタン背景色の変更 */
-.nav_toggle i.active {
-  background-color: #fff;
-}
-.nav_toggle i:nth-child(1) {
-  top: 13px;
-  margin-top: -1px;
-}
-.nav_toggle i:nth-child(2) {
-  top: 22px;
-  margin-top: -1px;
-}
-.nav_toggle i:nth-child(3) {
-  top: 31px;
-  margin-top: -1px;
-}
-/* ハンバーガーメニューボタンがクリックされた際のボタンの変形設定 */
-.nav_toggle.show i:nth-child(1) {
-  transform: translateY(6px) rotate(-45deg);
-}
-.nav_toggle.show i:nth-child(2) {
-  opacity: 0;
-}
-.nav_toggle.show i:nth-child(3) {
-  transform: translateY(-12px) rotate(45deg);
-}
-.headerMenu {
-  position: absolute;
-  right: -450px;
-  height: 100vh;
-  background-color: black;
-  padding-top: 73px;
-  width: 40%;
+.headerMenu ul {
+  display: flex;
 }
 .headerMenu a {
-  color: white;
+  color: #383b46;
   font-size: 22px;
   line-height: 73px;
   padding: 0 15px;
 }
-/* 該当ページのメニュー項目背景色を設定 */
+/* ウィンドウをスクロールした際に文字色を変更する設定 */
+.headerMenu a.active {
+  color: #fff;
+}
+/* 該当ページメニュー項目のtransition設定 */
 #index #navTop,
 #concept #navConcept,
 #product #navProduct,
@@ -164,7 +122,23 @@ header.active {
 #news05 #navNews,
 #news06 #navNews,
 #store #navStore,
-#contact #navContact{
+#contact #navContact {
+  transition: 0.5s;
+}
+/* headerがactiveとなった場合は該当ページのメニュー項目背景色を設定 */
+#index header.active #navTop,
+#concept header.active #navConcept,
+#product header.active #navProduct,
+#product01 header.active #navProduct,
+#product02 header.active #navProduct,
+#product03 header.active #navProduct,
+#product04 header.active #navProduct,
+#news header.active #navNews,
+#news04 header.active #navNews,
+#news05 header.active #navNews,
+#news06 header.active #navNews,
+#store header.active #navStore,
+#contact header.active #navContact {
   background-color: rgba(255, 255, 255, 0.5);
 }
 #index #navTop a,
@@ -173,7 +147,11 @@ header.active {
 #news #navNews a,
 #store #navStore a,
 #contact #navContact a {
-  color: #fff;
+  color: #383b46;
+}
+.headerMenu ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #383b46;
 }
 
 /* 
@@ -201,7 +179,7 @@ header.active {
 }
 .copyRight {
   font-size: 18px;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
 }
 .iconGp {
   display: flex;
@@ -226,8 +204,7 @@ header.active {
   position: relative;
 }
 .mainVisual .mainVs01,
-.mainVisual .mainVs02
- {
+.mainVisual .mainVs02 {
   height: 100vh;
   width: 100vw;
   background-size: cover;
@@ -242,11 +219,11 @@ header.active {
   background-position: center center;
 }
 .mainVisual h1 {
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-size: 7vw;
 }
 .mainVisual span {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 6vw;
   margin-left: 22px;
 }
@@ -353,7 +330,7 @@ header.active {
 }
 .productImages a {
   display: inline-block;
-  margin : 0 20px;
+  margin: 0 20px;
 }
 /* moreボタン調整 */
 #productS .transBtn {
@@ -379,12 +356,14 @@ header.active {
   margin: 10px auto 0;
   height: 100%;
 }
-  #newsS, #storeS {
-    font-size: 18px;
-    width: 100%;
-    padding-top: 44px;
+#newsS,
+#storeS {
+  font-size: 18px;
+  width: 100%;
+  padding-top: 44px;
 }
-.newsList, .storeInfo {
+.newsList,
+.storeInfo {
   margin-top: 30px;
 }
 
@@ -433,7 +412,7 @@ time {
   width: 100%;
   height: auto;
 }
-#storeImg>a:hover {
+#storeImg > a:hover {
   opacity: 0.7;
 }
 .storeDetail {
@@ -465,7 +444,7 @@ time {
   font-size: 18px;
   font-weight: bold;
   border: 1px solid #383b46;
-  padding:2px 10px;
+  padding: 2px 10px;
 }
 
 /* 
@@ -560,7 +539,7 @@ time {
 }
 #productList a:nth-child(even) {
   margin-right: 0;
-} 
+}
 #productList .item {
   border: 1px solid #e6e6e6;
   margin-bottom: 0 -2px -2px 0;
@@ -603,10 +582,10 @@ time {
   border-bottom: 1px solid #ddd;
 }
 .dtlDescription p {
-text-align: center;
-border-bottom: 1px solid #ddd;
-padding-top: 30px;
-padding-bottom: 30px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 .dtlDescription .txt p {
   border-bottom: none;
@@ -655,11 +634,11 @@ padding-bottom: 30px;
   width: 30%;
   height: auto;
 }
-#newsList  #article #articleDescription {
+#newsList #article #articleDescription {
   color: #3a3a3a;
   margin-top: 25px;
 }
-#newsList  #article #articleDescription span {
+#newsList #article #articleDescription span {
   display: block;
   color: #dbb725;
 }
@@ -682,15 +661,15 @@ padding-bottom: 30px;
 .newsContent .newsDate {
   color: #6d7a86;
 }
-.newsContent p:nth-child(n+2):nth-child(-n+6) {
+.newsContent p:nth-child(n + 2):nth-child(-n + 6) {
   margin-top: 40px;
 }
 .newsContent a {
   display: inline-block;
   margin: 0 auto;
-  padding: 5px 10px; 
+  padding: 5px 10px;
   background-color: #383b46;
-  color: #fff; 
+  color: #fff;
   border-radius: 5px;
 }
 
@@ -784,7 +763,7 @@ padding-bottom: 30px;
   margin-top: 0;
   padding-left: 0px;
 }
-#storeInfo #accessDtl p{
+#storeInfo #accessDtl p {
   margin-bottom: 15px;
 }
 #storeInfo #accessDtl p:nth-child(3) {
@@ -821,7 +800,7 @@ padding-bottom: 30px;
   display: block;
   margin: 0 auto;
 }
-#contactForm>p {
+#contactForm > p {
   margin-bottom: 40px;
   width: 275px;
 }
@@ -830,7 +809,7 @@ padding-bottom: 30px;
 }
 .baseInput input {
   width: 100%;
-  border: 1px solid rgba(167,167,167,.5);
+  border: 1px solid rgba(167, 167, 167, 0.5);
   font-size: 14px;
   height: 32px;
   line-height: 30px;
@@ -884,7 +863,7 @@ padding-bottom: 30px;
 .formRight4 textarea {
   width: 80%;
   height: 230px;
-  border: 1px solid rgba(167,167,167,.5);
+  border: 1px solid rgba(167, 167, 167, 0.5);
   font-size: 14px;
   line-height: 30px;
   padding: 5px;

@@ -1,21 +1,21 @@
 $(function () {
 
 // 【変数・定数の設定】
-    var duration = 400, // アニメーションの遷移時間
+    let duration = 400,
         $menu = $('.headerMenu'),
         $window = $(window),
         $header = $('header, header a, header .headerLogo a, .nav_toggle i'),
         navLink = $('.headerMenu li a');
     const $headerOffsetTop = $('body').offset().top;
 
-// 【メニューアンカーの設定（パララックスとの併用のため必要）】
-    // ナビゲーションをクリックした時のスムーズスクロール
-    navLink.click(function() {
-        $('html,body').animate({
-            scrollTop: $($(this).attr('href')).offset().top
-        }, 200);
+// ナビゲーションをクリックした時のスムーズスクロール
+    $('a[href^="#"]').click(function(){
+        let href= $(this).attr("href");
+        let target = $(href == "#" || href == "" ? 'html' : href);
+        let position = target.offset().top;
+        $("html, body").animate({scrollTop:position}, duration, "swing");
+        return false;
     });
-
 
 // 【スティッキーヘッダー設定】
     $header.each(function () {
@@ -32,6 +32,31 @@ $(function () {
         // ウィンドウのスクロールイベントを発生させる
         // (ヘッダーの初期位置を調整)
         $window.trigger('scroll');
+    });
+
+// 【ハンバーガーメニューボタンがクリックされた際のメニュー欄の表示非表示設定】
+    $('.nav_toggle').on('click', function(event) {
+        // nav_toggle、headerMenu、headerMenu ul liに
+        // showクラスをつける
+        $('.nav_toggle, .headerMenu, .headerMenu ul li').toggleClass('show');
+        // showクラスがついていればメニューを表示、
+        // showクラスがついていなければメニューが非表示
+        if ($menu.hasClass('show')) {
+            $menu.stop(true).animate({'right': 0}, duration);
+            // ハンバーガーメニューボタンの色を白にする
+            $('.nav_toggle i').css('background-color', '#fff');
+            // メニュー内のリストがクリックされたらメニューを非表示とする
+            $('.headerMenu ul li a').on('click', function(event) {
+                $menu.removeClass('show');
+                $('.nav_toggle').removeClass('show');
+                $menu.stop(true).css({'right': '-450px'});
+                $('.nav_toggle i').css('background-color', '');
+            });
+        } else {
+            $menu.stop(true).animate({'right': '-450px'}, duration);
+            $('.nav_toggle i').css('background-color', '');
+        };
+
     });
 
 // 【トップページ：メインビジュアル画像スライド設定】
@@ -79,29 +104,6 @@ $(function () {
         ]
     });
 
-// 【ハンバーガーメニューボタンがクリックされた際のメニュー欄の表示非表示設定】
-    $('.nav_toggle').on('click', function(event) {
-        // nav_toggle、headerMenu、headerMenu ul liに
-        // showクラスをつける
-        $('.nav_toggle, .headerMenu, .headerMenu ul li').toggleClass('show');
-        // showクラスがついていればメニューを表示、
-        // showクラスがついていなければメニューが非表示
-        if ($menu.hasClass('show')) {
-            $menu.stop(true).animate({'right': 0}, duration);
-            // ハンバーガーメニューボタンの色を白にする
-            $('.nav_toggle i').css('background-color', '#fff');
-            // メニュー内のリストがクリックされたらメニューを非表示とする
-            $('.headerMenu ul li').on('click', function(event) {
-                $menu.removeClass('show');
-                $('.nav_toggle').removeClass('show');
-                $menu.stop(true).animate({'right': '-450px'}, duration);
-                $('.nav_toggle i').css('background-color', '');
-            });
-        } else {
-            $menu.stop(true).animate({'right': '-450px'}, duration);
-            $('.nav_toggle i').css('background-color', '');
-        };
 
-    });
 
 });

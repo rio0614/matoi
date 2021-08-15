@@ -32,10 +32,10 @@ h2 {
   display: inline;
 }
 .ja {
-  font-family: 'Sawarabi Mincho', sans-serif;
+  font-family: "Sawarabi Mincho", sans-serif;
 }
 .en {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
 }
 /* 画像のブロック要素化 */
 img {
@@ -44,10 +44,6 @@ img {
 /* aタグのブロック要素化 */
 a {
   display: block;
-}
-/* スムーズスクロール設定 */
-html {
-  scroll-behavior: smooth;
 }
 
 /* 
@@ -91,9 +87,9 @@ header.active {
   left: 0;
   z-index: 10;
 }
- .headerLogo a:first-child.active {
+.headerLogo a:first-child.active {
   opacity: 1;
-} 
+}
 /* レスポンシブ用ハンバーガーメニューボタン設定 */
 .nav_toggle {
   display: block;
@@ -143,7 +139,9 @@ header.active {
   height: 100vh;
   background-color: black;
   padding-top: 73px;
-  width: 40%;
+  width: 100%;
+  text-align: center;
+  opacity: 0.9;
 }
 .headerMenu a {
   color: white;
@@ -164,7 +162,7 @@ header.active {
 #news05 #navNews,
 #news06 #navNews,
 #store #navStore,
-#contact #navContact{
+#contact #navContact {
   background-color: rgba(255, 255, 255, 0.5);
 }
 #index #navTop a,
@@ -201,7 +199,7 @@ header.active {
 }
 .copyRight {
   font-size: 18px;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
 }
 .iconGp {
   display: flex;
@@ -230,8 +228,7 @@ header.active {
   position: relative;
 }
 .mainVisual .mainVs01,
-.mainVisual .mainVs02
- {
+.mainVisual .mainVs02 {
   height: 100vh;
   width: 100vw;
   background-size: cover;
@@ -246,11 +243,11 @@ header.active {
   background-position: center center;
 }
 .mainVisual h1 {
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-size: 9vw;
 }
 .mainVisual span {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 7.6vw;
   margin-left: 13px;
 }
@@ -357,7 +354,7 @@ header.active {
 }
 .productImages a {
   display: inline-block;
-  margin : 0 20px;
+  margin: 0 20px;
 }
 /* moreボタン調整 */
 #productS .transBtn {
@@ -378,12 +375,14 @@ header.active {
   margin: 0 auto;
   height: 100%;
 }
-  #newsS, #storeS {
-    font-size: 18px;
-    width: 100%;
-    padding-top: 64px;
+#newsS,
+#storeS {
+  font-size: 18px;
+  width: 100%;
+  padding-top: 64px;
 }
-.newsList, .storeInfo {
+.newsList,
+.storeInfo {
   margin-top: 30px;
 }
 
@@ -461,7 +460,7 @@ time {
   font-size: 18px;
   font-weight: bold;
   border: 1px solid #383b46;
-  padding:2px 10px;
+  padding: 2px 10px;
 }
 
 /* 
@@ -558,7 +557,7 @@ time {
   max-width: 275px;
   padding: 30px 10px;
 }
-#productList .item .itemDescription>p:first-child {
+#productList .item .itemDescription > p:first-child {
   color: #999;
   margin-bottom: 10px;
 }
@@ -588,10 +587,10 @@ time {
   border-bottom: 1px solid #ddd;
 }
 .dtlDescription p {
-text-align: center;
-border-bottom: 1px solid #ddd;
-padding-top: 30px;
-padding-bottom: 30px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 .dtlDescription .txt p {
   border-bottom: none;
@@ -640,11 +639,11 @@ padding-bottom: 30px;
   width: 40%;
   height: auto;
 }
-#newsList  #article #articleDescription {
+#newsList #article #articleDescription {
   color: #3a3a3a;
   margin-top: 25px;
 }
-#newsList  #article #articleDescription span {
+#newsList #article #articleDescription span {
   display: block;
   color: #dbb725;
 }
@@ -667,15 +666,15 @@ padding-bottom: 30px;
 .newsContent .newsDate {
   color: #6d7a86;
 }
-.newsContent p:nth-child(n+2):nth-child(-n+6) {
+.newsContent p:nth-child(n + 2):nth-child(-n + 6) {
   margin-top: 40px;
 }
 .newsContent a {
   display: inline-block;
   margin: 0 auto;
-  padding: 5px 10px; 
+  padding: 5px 10px;
   background-color: #383b46;
-  color: #fff; 
+  color: #fff;
   border-radius: 5px;
 }
 
@@ -764,7 +763,7 @@ padding-bottom: 30px;
   margin-top: 20px;
   padding-left: 0;
 }
-#storeInfo #accessDtl p{
+#storeInfo #accessDtl p {
   margin-bottom: 15px;
 }
 #storeInfo #accessDtl p:nth-child(3) {
@@ -801,7 +800,7 @@ padding-bottom: 30px;
   display: block;
   margin: 0 auto;
 }
-#contactForm>p {
+#contactForm > p {
   margin-bottom: 40px;
   width: 275px;
 }
@@ -810,7 +809,7 @@ padding-bottom: 30px;
 }
 .baseInput input {
   width: 100%;
-  border: 1px solid rgba(167,167,167,.5);
+  border: 1px solid rgba(167, 167, 167, 0.5);
   font-size: 14px;
   height: 32px;
   line-height: 30px;
@@ -864,7 +863,7 @@ padding-bottom: 30px;
 .formRight4 textarea {
   width: 275px;
   height: 230px;
-  border: 1px solid rgba(167,167,167,.5);
+  border: 1px solid rgba(167, 167, 167, 0.5);
   font-size: 14px;
   line-height: 30px;
   padding: 5px;
