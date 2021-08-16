@@ -611,7 +611,7 @@ time {
   font-size: 45px;
   color: #595959;
   text-align: center;
-  width: 335px;
+  width: 100%;
   margin: 0 auto;
   padding-bottom: 10px;
   border-bottom: 1px solid #595959;
