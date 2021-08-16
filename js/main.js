@@ -59,6 +59,14 @@ $(function () {
 
     });
 
+// 【スマホ表示の際のアドレスバーの高さ制御】
+    // ウィンドウ内部の高さ(アドレスバーを除く)をピクセル単位で取得
+    var vh = window.innerHeight;
+    // 該当要素の高さを取得しピクセル単位に変換
+    document.getElementById('fullScreen').style.height=vh+'px';
+    // 要素の表示の際、アドレスバーの高さを除いた高さを取得
+    $('#fullScreen').css('height',$(window).height());
+
 // 【トップページ：メインビジュアル画像スライド設定】
     $('.mainVisual').slick({
         autoplay: true,

@@ -46,12 +46,11 @@
   <script src="https://kit.fontawesome.com/c1b04e277a.js" crossorigin="anonymous"></script>
   
   <!-- jquery読み込み -->
-  <script src="js/jquery-3.6.0.min.js"></script>
-
-  <!-- <script src="js/jquery-3.6.0.min.js"></script> -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/d3js/6.7.0/d3.min.js"></script>
+  <script>
+      window.jQuery || document.write('<script src="js/jquery-3.6.0.min.js"><\/script>')
+  </script>
   <script src="js/slick.min.js"></script>
-  <script src="js/luxy.js"></script>
   <script src="js/main.js"></script>
 </head>
 
@@ -83,131 +82,116 @@
     </div>
   </header>
 
-  <div id="luxy">
-    <!-- メインセクション -->
-    <main>
-      <!-- メインビジュアル slickスライドショー-->
-      <div class="mainVisualGuide luxy-el" data-speed-y="20">
-        <div class="mainVisual" id="fullScreen">
-          <a href="concept.html" class="mainVs01"><h1>I LOVE WHO I AM.<br><span>自分らしさを身に纏う。</span></h1></a>
-          <a href="concept.html" class="mainVs02"><h1>I LOVE WHO I AM.<br><span>自分らしさを身に纏う。</span></h1></a>
-        </div>
-        <i class="fas fa-angle-double-down fa-3x"></i>
-      </div> 
-
-      <!-- コンセプトセクション -->
-      <div class="mask">
-      <a href="concept.html" class="conceptAnc">
-        <section id="conceptS">
-          <div id="conceptContents">
-            <h2 class="en">Concept</h2>
-            <p class="ja">他の誰でもない<br>鮮明な"自己"を表現するために<br>自分らしい生き方を身に纏う</p>
-          </div>
-        </section>
-      </a>
+  <!-- メインセクション -->
+  <main>
+    <!-- メインビジュアル slickスライドショー-->
+    <div class="mainVisualGuide luxy-el" data-speed-y="20">
+      <div class="mainVisual" id="fullScreen">
+        <a href="concept.html" class="mainVs01"><h1>I LOVE WHO I AM.<br><span>自分らしさを身に纏う。</span></h1></a>
+        <a href="concept.html" class="mainVs02"><h1>I LOVE WHO I AM.<br><span>自分らしさを身に纏う。</span></h1></a>
       </div>
+      <i class="fas fa-angle-double-down fa-3x"></i>
+    </div> 
 
-      
-      <!-- プロダクトセクション -->
-      <section id="productS">
-        <h2 class="en">Product</h2>
-        <!-- 商品画像slickスライドショー -->
-        <ul class="productImages">
-          <li><a href="product01.html"><img src="images/productTop01.jpg" alt="K18 YG ゴールドピアス"></a></li>
-          <li><a href="product02.html"><img src="images/productTop02.jpg" alt="ゴールドパイプネックレス"></a></li>
-          <li><a href="product03.html"><img src="images/productTop03.jpg" alt="ゴールドブラック/ツートンリング"></a></li>
-          <li><a href="product04.html"><img src="images/productTop04.jpg" alt="ジュエリーネックレス"></a></li>
-        </ul>
-        <p><a href="product.html" class="transBtn en">More</a></p>
+    <!-- コンセプトセクション -->
+    <div class="mask">
+    <a href="concept.html" class="conceptAnc">
+      <section id="conceptS">
+        <div id="conceptContents">
+          <h2 class="en">Concept</h2>
+          <p class="ja">他の誰でもない<br>鮮明な"自己"を表現するために<br>自分らしい生き方を身に纏う</p>
+        </div>
       </section>
+    </a>
+    </div>
 
-      <div class="container">
-        <!-- サブセクション -->
-        <div class="sub">
-          <!-- ニュースセクション -->
-          <section id="newsS">
-            <h2 class="en">News</h2>
-            <ul class="newsList">
-              <li class="newsAtcl">
-                <a href="news06.html">
-                <p><time datetime="2021-07-12" class="ja">2021.07.12</time><span class="newsTag en">Information</span><br>
-                <span class="NewsDtl ja">Special Thanks 10％OFF</span></p>
-                </a>
-              </li>
-              <li class="newsAtcl">
-                <a href="news05.html">
-                <p><time datetime="2021-04-27" class="ja">2021.04.27</time><span class="newsTag en">Information</span><br>
-                <span class="NewsDtl ja">ゴールデンウィークの営業につきまして</span></p>
-                </a>
-              </li>
-              <li class="newsAtcl">
-                <a href="news04.html">
-                <p><time datetime="2021-04-24" class="ja">2021.04.24</time><br>
-                <span class="NewsDtl ja">メンテナンスのお知らせ</span></p>
-                </a>
-              </li>
-            </ul>
-            <p><a href="news.html" class="transBtn en">More</a></p>
-          </section>
+    <!-- プロダクトセクション -->
+    <section id="productS">
+      <h2 class="en">Product</h2>
+      <!-- 商品画像slickスライドショー -->
+      <ul class="productImages">
+        <li><a href="product01.html"><img src="images/productTop01.jpg" alt="K18 YG ゴールドピアス"></a></li>
+        <li><a href="product02.html"><img src="images/productTop02.jpg" alt="ゴールドパイプネックレス"></a></li>
+        <li><a href="product03.html"><img src="images/productTop03.jpg" alt="ゴールドブラック/ツートンリング"></a></li>
+        <li><a href="product04.html"><img src="images/productTop04.jpg" alt="ジュエリーネックレス"></a></li>
+      </ul>
+      <p><a href="product.html" class="transBtn en">More</a></p>
+    </section>
 
-          <!-- ストアセクション -->
-          <section id="storeS">
-            <h2 class="en">Store</h2>
-            <div class="storeInfo">
-              <div id="storeImg">
-                <a href="store.html"><img src="images/store.jpg" alt="店舗オープンイメージ画像"></a>
-                <p><a href="store.html" class="transBtn en">Map</a></p>
+    <div class="container">
+      <!-- サブセクション -->
+      <div class="sub">
+        <!-- ニュースセクション -->
+        <section id="newsS">
+          <h2 class="en">News</h2>
+          <ul class="newsList">
+            <li class="newsAtcl">
+              <a href="news06.html">
+              <p><time datetime="2021-07-12" class="ja">2021.07.12</time><span class="newsTag en">Information</span><br>
+              <span class="NewsDtl ja">Special Thanks 10％OFF</span></p>
+              </a>
+            </li>
+            <li class="newsAtcl">
+              <a href="news05.html">
+              <p><time datetime="2021-04-27" class="ja">2021.04.27</time><span class="newsTag en">Information</span><br>
+              <span class="NewsDtl ja">ゴールデンウィークの営業につきまして</span></p>
+              </a>
+            </li>
+            <li class="newsAtcl">
+              <a href="news04.html">
+              <p><time datetime="2021-04-24" class="ja">2021.04.24</time><br>
+              <span class="NewsDtl ja">メンテナンスのお知らせ</span></p>
+              </a>
+            </li>
+          </ul>
+          <p><a href="news.html" class="transBtn en">More</a></p>
+        </section>
+
+        <!-- ストアセクション -->
+        <section id="storeS">
+          <h2 class="en">Store</h2>
+          <div class="storeInfo">
+            <div id="storeImg">
+              <a href="store.html"><img src="images/store.jpg" alt="店舗オープンイメージ画像"></a>
+              <p><a href="store.html" class="transBtn en">Map</a></p>
+            </div>
+            <div class="storeDetail">
+              <div class="storeName">
+                <p class="en">Omotesando</p>
+                <p class="ja">表参道店</p>
               </div>
-              <div class="storeDetail">
-                <div class="storeName">
-                  <p class="en">Omotesando</p>
-                  <p class="ja">表参道店</p>
-                </div>
-                <div class="storeAddress">
-                  <p class="ja">〒192-0364</p>
-                  <p class="ja">東京都八王子市南大沢2-27</p>
-                  <p class="ja">フレスコ南大沢2F</p>
-                </div>
-                <div class="storeOthers">
-                  <p class="ja">Tel: 042-670-8122</p>
-                  <p class="ja">Open: 11:00~19:00</p>
-                </div>
+              <div class="storeAddress">
+                <p class="ja">〒192-0364</p>
+                <p class="ja">東京都八王子市南大沢2-27</p>
+                <p class="ja">フレスコ南大沢2F</p>
+              </div>
+              <div class="storeOthers">
+                <p class="ja">Tel: 042-670-8122</p>
+                <p class="ja">Open: 11:00~19:00</p>
               </div>
             </div>
-          </section>
-        </div>
+          </div>
+        </section>
       </div>
-    </main>
+    </div>
+  </main>
 
-    <!-- フッター -->
-    <footer">
-      <div class="teturnTop">
-        <a href="#index">
-          <i class="fas fa-chevron-up fa-2x"></i>
-        </a>
-      </div>
-      <div class="gFooter">
-        <ul class="iconGp">
-          <li><a href="#"><i class="fab fa-facebook-square fa-2x"></i></a></li>
-          <li><a href="#"><i class="fab fa-twitter fa-2x"></i></i></a></li>
-          <li><a href="#index"><i class="fab fa-instagram fa-2x"></i></a></li>
-        </ul>
-        <p class="copyRight en">&copy;matoi, Ltd. All Rights Reserved.</p>
-      </div>
-    </footer>
-  </div>
-
-  <script charset="utf-8">
-    // パララックスjs
-    luxy.init();
-    // 【スマホ表示の際のアドレスバーの高さ制御】
-    // ウィンドウ内部の高さ(アドレスバーを除く)をピクセル単位で取得
-    var vh = window.innerHeight;
-    // 該当要素の高さを取得しピクセル単位に変換
-    document.getElementById('fullScreen').style.height=vh+'px';
-    // 要素の表示の際、アドレスバーの高さを除いた高さを取得
-    $('#fullScreen').css('height',$(window).height());
-  </script>
+  <!-- フッター -->
+  <footer">
+    <div class="teturnTop">
+      <a href="#index">
+        <i class="fas fa-chevron-up fa-2x"></i>
+      </a>
+    </div>
+    <div class="gFooter">
+      <ul class="iconGp">
+        <li><a href="#"><i class="fab fa-facebook-square fa-2x"></i></a></li>
+        <li><a href="#"><i class="fab fa-twitter fa-2x"></i></i></a></li>
+        <li><a href="#index"><i class="fab fa-instagram fa-2x"></i></a></li>
+      </ul>
+      <p class="copyRight en">&copy;matoi, Ltd. All Rights Reserved.</p>
+    </div>
+  </footer>
 
 </body>
 
