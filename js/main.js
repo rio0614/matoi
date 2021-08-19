@@ -4,8 +4,7 @@ $(function () {
     let duration = 400,
         $menu = $('.headerMenu'),
         $window = $(window),
-        $header = $('header, header a, header .headerLogo a, .nav_toggle i'),
-        navLink = $('.headerMenu li a');
+        $header = $('header, header a, header .headerLogo a, .nav_toggle i');
     const $headerOffsetTop = $('body').offset().top;
 
 // ナビゲーションをクリックした時のスムーズスクロール
