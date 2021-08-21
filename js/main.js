@@ -1,7 +1,9 @@
 $(function () {
 
 // 【変数・定数の設定】
-    let duration = 400,
+    let smoothDuration = 400,
+        openDuration = 250,
+        closeDuration = 200,
         $menu = $('.headerMenu'),
         $window = $(window),
         $header = $('header, header a, header .headerLogo a, .nav_toggle i');
@@ -12,7 +14,7 @@ $(function () {
         let href= $(this).attr("href");
         let target = $(href == "#" || href == "" ? 'html' : href);
         let position = target.offset().top;
-        $("html, body").animate({scrollTop:position}, duration, "swing");
+        $("html, body").animate({scrollTop:position}, smoothDuration, "swing");
         return false;
     });
 
@@ -41,7 +43,7 @@ $(function () {
         // showクラスがついていればメニューを表示、
         // showクラスがついていなければメニューが非表示
         if ($menu.hasClass('show')) {
-            $menu.stop(true).animate({'right': 0}, duration);
+            $menu.stop(true).animate({'right': 0}, openDuration);
             // ハンバーガーメニューボタンの色を白にする
             $('.nav_toggle i').css('background-color', '#fff');
             // メニュー内のリストがクリックされたらメニューを非表示とする
@@ -52,7 +54,7 @@ $(function () {
                 $('.nav_toggle i').css('background-color', '');
             });
         } else {
-            $menu.stop(true).animate({'right': '-450px'}, duration);
+            $menu.stop(true).animate({'right': '-450px'}, closeDuration);
             $('.nav_toggle i').css('background-color', '');
         };
 
