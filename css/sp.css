@@ -187,12 +187,12 @@ header.active {
   padding-top: 35px;
   padding-bottom: 30px;
 }
-.teturnTop {
+.returnTop {
   text-align: center;
   margin: 80px auto 50px;
   padding-top: 50px;
 }
-.teturnTop a {
+.returnTop a {
   color: #9c9da3;
   display: inline-block;
 }
@@ -496,14 +496,14 @@ time {
   position: relative;
   height: 146.5px;
 }
-#concept .teturnTop {
+#concept .returnTop {
   position: absolute;
   top: -210px;
   text-align: center;
   left: 50%;
   margin-left: -14px;
 }
-#concept .teturnTop a {
+#concept .returnTop a {
   color: #fff;
 }
 

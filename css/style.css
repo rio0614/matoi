@@ -166,16 +166,16 @@ header.active {
   padding-top: 35px;
   padding-bottom: 30px;
 }
-.teturnTop {
+.returnTop {
   text-align: center;
   margin: 80px auto 50px;
 }
-.teturnTop a {
+.returnTop a {
   color: #383b46;
   opacity: 0.5;
   display: inline-block;
 }
-#concept .teturnTop {
+#concept .returnTop {
   position: absolute;
   bottom: 0;
   text-align: center;
