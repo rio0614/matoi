@@ -8,40 +8,44 @@
   text-decoration: none;
   list-style: none;
 }
-/* float解除設定準備 */
+
 .clearfix {
   content: "";
   display: block;
   clear: both;
 }
-/* コンテナの設定 */
+
 .container {
   padding: 0 30px;
   margin: 0 auto;
   max-width: 1366px;
 }
-/* フォント設定 */
+
 body {
   color: #3a3a3a;
 }
+
 h2 {
   font-size: 30px;
   letter-spacing: 1.5px;
 }
+
 .txtLayout {
   display: inline;
 }
+
 .ja {
   font-family: "Sawarabi Mincho", sans-serif;
 }
+
 .en {
   font-family: "Cormorant Garamond", serif;
 }
-/* 画像のブロック要素化 */
+
 img {
   display: block;
 }
-/* aタグのブロック要素化 */
+
 a {
   display: block;
 }
@@ -61,23 +65,27 @@ header {
   z-index: 10;
   transition: 0.5s;
 }
-/* ウィンドウをスクロールした際に背景色と文字色を変更する設定 */
+
 header.active {
   background-color: #1f2331;
   color: #fff;
   opacity: 1;
 }
+
 .headerG {
   display: flex;
   justify-content: space-between;
 }
+
 .headerLogo {
   margin-top: 10px;
   position: relative;
 }
+
 .headerLogo img {
   width: 70%;
 }
+
 .headerLogo a:first-child {
   position: absolute;
   transition: 0.5s;
@@ -86,30 +94,34 @@ header.active {
   left: 0;
   z-index: 10;
 }
+
 .headerLogo a:nth-child(2) {
   margin-top: 5px;
 }
+
 .headerLogo a.active {
   opacity: 1;
 }
-/* レスポンシブ用ハンバーガーメニューボタン（PC上は非表示） */
+
 .nav_toggle {
   display: none;
 }
+
 .headerMenu ul {
   display: flex;
 }
+
 .headerMenu a {
   color: #383b46;
   font-size: 22px;
   line-height: 73px;
   padding: 0 15px;
 }
-/* ウィンドウをスクロールした際に文字色を変更する設定 */
+
 .headerMenu a.active {
   color: #fff;
 }
-/* 該当ページメニュー項目のtransition設定 */
+
 #index #navTop,
 #concept #navConcept,
 #product #navProduct,
@@ -125,7 +137,7 @@ header.active {
 #contact #navContact {
   transition: 0.5s;
 }
-/* headerがactiveとなった場合は該当ページのメニュー項目背景色を設定 */
+
 #index header.active #navTop,
 #concept header.active #navConcept,
 #product header.active #navProduct,
@@ -141,6 +153,7 @@ header.active {
 #contact header.active #navContact {
   background-color: rgba(255, 255, 255, 0.5);
 }
+
 #index #navTop a,
 #concept #navConcept a,
 #product #navProduct a,
@@ -149,6 +162,7 @@ header.active {
 #contact #navContact a {
   color: #383b46;
 }
+
 .headerMenu ul li a:hover {
   background-color: rgba(255, 255, 255, 0.5);
   color: #383b46;
@@ -167,28 +181,34 @@ header.active {
   padding-top: 35px;
   padding-bottom: 30px;
 }
+
 .returnTop {
   text-align: center;
   margin: 80px auto 50px;
   padding-top: 50px;
 }
+
 .returnTop a {
   color: #383b46;
   opacity: 0.5;
   display: inline-block;
 }
+
 .copyRight {
   font-size: 18px;
   font-family: "Cormorant Garamond", serif;
 }
+
 .iconGp {
   display: flex;
   justify-content: center;
   padding-bottom: 25px;
 }
+
 .iconGp li {
   margin: 0 10px;
 }
+
 .iconGp a {
   color: #fff;
 }
@@ -203,6 +223,7 @@ header.active {
   text-decoration: none;
   position: relative;
 }
+
 .mainVisual .mainVs01,
 .mainVisual .mainVs02 {
   height: 100vh;
@@ -210,23 +231,28 @@ header.active {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 .mainVisual .mainVs01 {
   background-image: url(../images/mainVsTop01.jpg);
   background-position: center center;
 }
+
 .mainVisual .mainVs02 {
   background-image: url(../images/mainVsTop02.jpg);
   background-position: center center;
 }
+
 .mainVisual h1 {
   font-family: "Work Sans", sans-serif;
   font-size: 7vw;
 }
+
 .mainVisual span {
   font-family: "Noto Sans JP", sans-serif;
   font-size: 6vw;
   margin-left: 22px;
 }
+
 .mainVs01 h1 {
   position: absolute;
   bottom: 31%;
@@ -235,6 +261,7 @@ header.active {
   line-height: 100%;
   text-align: center;
 }
+
 .mainVs02 h1 {
   position: absolute;
   top: 12%;
@@ -243,9 +270,11 @@ header.active {
   line-height: 100%;
   text-align: center;
 }
+
 .mainVisualGuide {
   position: relative;
 }
+
 .fa-angle-double-down {
   animation: guideAnimation 1.5s infinite linear;
   position: absolute;
@@ -254,6 +283,7 @@ header.active {
   left: 50%;
   color: #ffcc33;
 }
+
 @keyframes guideAnimation {
   0% {
     bottom: 4%;
@@ -282,12 +312,14 @@ header.active {
   height: 300px;
   position: relative;
 }
+
 #conceptS #conceptContents {
   padding-bottom: 30px;
   position: absolute;
   top: 5%;
   left: 10%;
 }
+
 #conceptS h2 {
   padding-top: 30px;
   padding-bottom: 5px;
@@ -295,12 +327,14 @@ header.active {
   border-bottom: 1px solid #3a3a3a;
   width: 150px;
 }
+
 #conceptS p {
   padding-top: 30px;
   font-size: 24px;
   line-height: 1.5;
   letter-spacing: 1.5px;
 }
+
 .conceptAnc {
   color: #3a3a3a;
 }
@@ -320,19 +354,22 @@ header.active {
   height: 100%;
   position: relative;
 }
+
 .productImages {
   margin: 0 auto;
   padding-top: 30px;
 }
+
 .productImages img {
   width: 200px;
   height: 200px;
 }
+
 .productImages a {
   display: inline-block;
   margin: 0 20px;
 }
-/* moreボタン調整 */
+
 #productS .transBtn {
   margin-top: 30px;
   margin-bottom: 0px;
@@ -347,6 +384,7 @@ header.active {
   position: relative;
   background-color: #fff;
 }
+
 .sub {
   display: flex;
   position: relative;
@@ -356,12 +394,14 @@ header.active {
   margin: 10px auto 0;
   height: 100%;
 }
+
 #newsS,
 #storeS {
   font-size: 18px;
   width: 100%;
   padding-top: 44px;
 }
+
 .newsList,
 .storeInfo {
   margin-top: 30px;
@@ -375,24 +415,30 @@ header.active {
 #newsS h2 {
   text-align: center;
 }
+
 .newsList {
   width: 300px;
 }
+
 .newsAtcl {
   margin-bottom: 1.5em;
   line-height: 1.25em;
 }
+
 .newsAtcl a {
   display: block;
   color: #3a3a3a;
 }
+
 .NewsDtl {
   margin-top: 5px;
 }
+
 .newsTag {
   color: #dbb725;
   font-weight: bold;
 }
+
 time {
   margin-right: 10px;
 }
@@ -405,27 +451,33 @@ time {
 #storeS h2 {
   text-align: center;
 }
+
 #storeS {
   position: relative;
 }
+
 .storeInfo img {
   width: 100%;
   height: auto;
 }
+
 #storeImg > a:hover {
   opacity: 0.7;
 }
+
 .storeDetail {
   line-height: 1.4em;
   margin-top: 20px;
 }
+
 .storeName p:nth-child(1) {
   font-size: 24px;
 }
+
 .storeDetail div {
   margin-bottom: 15px;
 }
-/* Mapボタン調整 */
+
 #storeImg .transBtn {
   position: absolute;
   top: 600px;
@@ -460,13 +512,16 @@ time {
   background-position: center center;
   opacity: 0.95;
 }
+
 #concept #conceptVisual .container {
   width: 500px;
 }
+
 #conceptVisual .conceptLogo {
   margin: 0 auto;
   padding-top: 120px;
 }
+
 #conceptVisual h2 {
   color: #fff;
   text-align: center;
@@ -474,16 +529,19 @@ time {
   margin-top: 15px;
   margin-bottom: 50px;
 }
+
 #conceptVisual p {
   color: #fff;
   text-align: left;
   font-size: 18px;
   margin-bottom: 40px;
 }
+
 #concept footer {
   position: relative;
   height: 146.5px;
 }
+
 #concept .returnTop {
   position: absolute;
   top: -210px;
@@ -491,6 +549,7 @@ time {
   left: 50%;
   margin-left: -14px;
 }
+
 #concept .returnTop a {
   color: #fff;
 }
@@ -510,6 +569,7 @@ time {
   justify-content: center;
   align-items: center;
 }
+
 #productVisual h1 {
   color: #fff;
   margin: 20px auto 0;
@@ -517,6 +577,7 @@ time {
   text-align: center;
   font-size: 45px;
 }
+
 #product h2 {
   color: #595959;
   text-align: center;
@@ -525,6 +586,7 @@ time {
   padding-bottom: 10px;
   border-bottom: 1px solid #595959;
 }
+
 #productList {
   display: flex;
   flex-wrap: wrap;
@@ -532,30 +594,37 @@ time {
   margin: 0 auto 100px;
   max-width: 866px;
 }
+
 #productList a {
   color: #3a3a3a;
   margin-right: 20px;
   margin-bottom: 20px;
 }
+
 #productList a:nth-child(even) {
   margin-right: 0;
 }
+
 #productList .item {
   border: 1px solid #e6e6e6;
   margin-bottom: 0 -2px -2px 0;
 }
+
 #productList .item .itemDescription {
   text-align: center;
   max-width: 275px;
   padding: 30px 10px;
 }
+
 #productList .item .itemDescription p:first-child {
   color: #999;
   margin-bottom: 10px;
 }
+
 #productList .item .itemDescription p span {
   font-size: 10px;
 }
+
 #productList img {
   width: 275px;
   height: 275px;
@@ -569,11 +638,13 @@ time {
 .productDtlImg {
   margin: 50px auto 30px;
 }
+
 .productDtlImg img {
   margin: 0 auto;
   width: 350px;
   height: 350px;
 }
+
 .dtlDescription {
   width: 80%;
   margin: 0 auto;
@@ -581,12 +652,14 @@ time {
   text-align: center;
   border-bottom: 1px solid #ddd;
 }
+
 .dtlDescription p {
   text-align: center;
   border-bottom: 1px solid #ddd;
   padding-top: 30px;
   padding-bottom: 30px;
 }
+
 .dtlDescription .txt p {
   border-bottom: none;
   text-align: left;
@@ -602,6 +675,7 @@ time {
   padding-top: 110px;
   margin-bottom: 100px;
 }
+
 #newsVisual h1 {
   font-size: 45px;
   color: #595959;
@@ -611,33 +685,40 @@ time {
   padding-bottom: 10px;
   border-bottom: 1px solid #595959;
 }
+
 #newsList {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   align-items: stretch;
 }
+
 #newsList a {
   width: 46.3636%;
   max-width: 300px;
   margin-right: 7.2727%;
   margin-bottom: 30px;
 }
+
 #newsList a:nth-child(2n) {
   margin-right: 0;
 }
+
 #newsList #newsImg {
   border: 1px solid #e6e6e6;
 }
+
 #newsList #newsImg img {
   margin: 30% auto;
   width: 30%;
   height: auto;
 }
+
 #newsList #article #articleDescription {
   color: #3a3a3a;
   margin-top: 25px;
 }
+
 #newsList #article #articleDescription span {
   display: block;
   color: #dbb725;
@@ -655,15 +736,19 @@ time {
   text-align: left;
   border-bottom: 1px solid #ddd;
 }
+
 .newsContent p:first-child {
   text-align: center;
 }
+
 .newsContent .newsDate {
   color: #6d7a86;
 }
+
 .newsContent p:nth-child(n + 2):nth-child(-n + 6) {
   margin-top: 40px;
 }
+
 .newsContent a {
   display: inline-block;
   margin: 0 auto;
@@ -687,24 +772,29 @@ time {
   text-align: center;
   font-size: 16px;
 }
+
 .dtlBtn a {
   color: #6d7a86;
   border-bottom: 1px solid rgba(140, 150, 160, 0.5);
   display: inline-block;
 }
+
 .dtlBtn .prev {
   position: absolute;
   left: 0;
 }
+
 .dtlBtn .next {
   position: absolute;
   right: 0;
 }
+
 .dtlVisual {
   text-align: center;
   padding-top: 110px;
   margin-bottom: 20px;
 }
+
 .dtlVisual h1 {
   font-size: 30px;
   color: #8c8c8c;
@@ -725,6 +815,7 @@ time {
   padding-top: 110px;
   margin-bottom: 60px;
 }
+
 #storeVisual h1 {
   font-size: 45px;
   color: #595959;
@@ -734,24 +825,29 @@ time {
   padding-bottom: 10px;
   border-bottom: 1px solid #595959;
 }
+
 #storeVisual h2 {
   font-size: 45px;
   line-height: 30px;
 }
+
 #storeVisual h2 span {
   font-size: 13px;
 }
+
 #storeInfo {
   display: flex;
   justify-content: center;
   align-items: stretch;
 }
+
 #storeInfo .map {
   width: 55%;
   position: relative;
   padding-top: 55%;
   margin: 0 auto;
 }
+
 #storeInfo .map iframe {
   position: absolute;
   top: 0;
@@ -759,16 +855,20 @@ time {
   width: 100%;
   height: 100%;
 }
+
 #storeInfo #accessDtl {
   margin-top: 0;
   padding-left: 0px;
 }
+
 #storeInfo #accessDtl p {
   margin-bottom: 15px;
 }
+
 #storeInfo #accessDtl p:nth-child(3) {
   font-size: 13px;
 }
+
 #storeInfo #accessDtl p:nth-child(3) span {
   margin-left: 1em;
 }
@@ -783,6 +883,7 @@ time {
   padding-top: 110px;
   margin-bottom: 60px;
 }
+
 #contactVisual h1 {
   font-size: 45px;
   color: #595959;
@@ -792,21 +893,26 @@ time {
   padding-bottom: 10px;
   border-bottom: 1px solid #595959;
 }
+
 #contactFormBox {
   width: 90%;
   margin: 0 auto;
 }
+
 #contactForm {
   display: block;
   margin: 0 auto;
 }
+
 #contactForm > p {
   margin-bottom: 40px;
   width: 275px;
 }
+
 .formRow {
   margin-bottom: 20px;
 }
+
 .baseInput input {
   width: 100%;
   border: 1px solid rgba(167, 167, 167, 0.5);
@@ -815,9 +921,11 @@ time {
   line-height: 30px;
   padding: 5px;
 }
+
 .formLayout {
   margin-bottom: 45px;
 }
+
 .formLeft {
   flex-grow: 0;
   flex-shrink: 0;
@@ -828,38 +936,46 @@ time {
   font-size: 14px;
   letter-spacing: 1.6px;
 }
+
 .formLeft::after {
   content: ":";
 }
+
 .formLeft span {
   color: #cd0000;
   margin-left: 10px;
   margin-right: 10px;
   font-size: 11px;
 }
+
 .formRight1 {
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: 0%;
 }
+
 .formRight1 li {
   display: inline-block;
   width: 44%;
   margin-right: 30px;
   margin-bottom: 10px;
 }
+
 .formRight1 span {
   font-size: 14px;
   padding-right: 12px;
   text-align: left;
   letter-spacing: 1px;
 }
+
 .formRight2 {
   width: 80%;
 }
+
 .formRight3 {
   width: 44%;
 }
+
 .formRight4 textarea {
   width: 80%;
   height: 230px;
@@ -868,6 +984,7 @@ time {
   line-height: 30px;
   padding: 5px;
 }
+
 #contact form input[type="submit"] {
   display: block;
   margin: 0 auto;

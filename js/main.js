@@ -1,6 +1,5 @@
 $(function () {
 
-// 【変数・定数の設定】
     let smoothDuration = 400,
         openDuration = 250,
         closeDuration = 200,
@@ -21,7 +20,6 @@ $(function () {
 // 【スティッキーヘッダー設定】
     $header.each(function () {
 
-        // ウィンドウがスクロールされたらヘッダーを表示する設定
         $window.on('scroll', function () {
             if($window.scrollTop() > $headerOffsetTop) {
                 $header.addClass('active');
@@ -30,23 +28,15 @@ $(function () {
             }
         });
 
-        // ウィンドウのスクロールイベントを発生させる
-        // (ヘッダーの初期位置を調整)
         $window.trigger('scroll');
     });
 
 // 【ハンバーガーメニューボタンがクリックされた際のメニュー欄の表示非表示設定】
     $('.nav_toggle').on('click', function(event) {
-        // nav_toggle、headerMenu、headerMenu ul liに
-        // showクラスをつける
         $('.nav_toggle, .headerMenu, .headerMenu ul li').toggleClass('show');
-        // showクラスがついていればメニューを表示、
-        // showクラスがついていなければメニューが非表示
         if ($menu.hasClass('show')) {
             $menu.stop(true).animate({'right': 0}, openDuration);
-            // ハンバーガーメニューボタンの色を白にする
             $('.nav_toggle i').css('background-color', '#fff');
-            // メニュー内のリストがクリックされたらメニューを非表示とする
             $('.headerMenu ul li a').on('click', function(event) {
                 $menu.removeClass('show');
                 $('.nav_toggle').removeClass('show');
@@ -61,11 +51,10 @@ $(function () {
     });
 
 // 【スマホ表示の際のアドレスバーの高さ制御】
-    // ウィンドウ内部の高さ(アドレスバーを除く)をピクセル単位で取得
     var vh = window.innerHeight;
     // 該当要素の高さを取得しピクセル単位に変換
-    document.getElementById('fullScreen').style.height=vh+'px';
-    // 要素の表示の際、アドレスバーの高さを除いた高さを取得
+    // document.getElementById('fullScreen').style.height=vh+'px';
+    $('fullScreen').style.height=vh+'px';
     $('#fullScreen').css('height',$(window).height());
 
 // 【トップページ：メインビジュアル画像スライド設定】
