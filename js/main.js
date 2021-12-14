@@ -52,8 +52,6 @@ $(function () {
 
 // 【スマホ表示の際のアドレスバーの高さ制御】
     var vh = window.innerHeight;
-    // 該当要素の高さを取得しピクセル単位に変換
-    // document.getElementById('fullScreen').style.height=vh+'px';
     $('#fullScreen').css('height',$(window).height());
 
 // 【トップページ：メインビジュアル画像スライド設定】
