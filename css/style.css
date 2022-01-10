@@ -524,7 +524,7 @@ time {
   width: 100vw;
   background-image: url(../images/conceptVs.jpg);
   background-size: cover;
-  background-position: center center;
+  background-position: center 35%;
   opacity: 0.95;
 }
 
@@ -836,13 +836,14 @@ time {
 }
 
 #storeInfo {
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-items: stretch;
 }
 
 #storeInfo .map {
-  width: 550px;
+  width: 70%;
+  margin: 0 auto;
   position: relative;
   padding-top: 50%;
 }
@@ -856,7 +857,9 @@ time {
 }
 
 #storeInfo #accessDtl {
-  padding-left: 40px;
+  width: 70%;
+  margin: 40px auto 0;
+  /* padding-left: 40px; */
 }
 
 #storeInfo #accessDtl p {

@@ -522,7 +522,7 @@ time {
 ========================================
 */
 #conceptVisual {
-  height: 100vh;
+  height: 880px;
   width: 100vw;
   background-image: url(../images/conceptVs.jpg);
   background-size: cover;
