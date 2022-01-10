@@ -40,11 +40,11 @@ $(function () {
             $('.headerMenu ul li a').on('click', function(event) {
                 $menu.removeClass('show');
                 $('.nav_toggle').removeClass('show');
-                $menu.stop(true).css({'right': '-450px'});
+                $menu.stop(true).css({'right': '-105%'});
                 $('.nav_toggle i').css('background-color', '');
             });
         } else {
-            $menu.stop(true).animate({'right': '-450px'}, closeDuration);
+            $menu.stop(true).animate({'right': '-105%'}, closeDuration);
             $('.nav_toggle i').css('background-color', '');
         };
 

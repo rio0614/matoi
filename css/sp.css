@@ -151,7 +151,7 @@ header.active {
 
 .headerMenu {
   position: absolute;
-  right: -450px;
+  right: -105%;
   height: 100vh;
   background-color: black;
   padding-top: 73px;
@@ -522,7 +522,7 @@ time {
 ========================================
 */
 #conceptVisual {
-  height: 880px;
+  height: 100vh;
   width: 100vw;
   background-image: url(../images/conceptVs.jpg);
   background-size: cover;
@@ -839,7 +839,7 @@ time {
 }
 
 #storeInfo .map {
-  width: 315px;
+  width: 100%;
   position: relative;
   padding-top: 100%;
   margin: 0 auto;

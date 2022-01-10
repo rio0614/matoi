@@ -184,7 +184,7 @@ header.active {
 
 .returnTop {
   text-align: center;
-  margin: 80px auto 50px;
+  margin: 130px auto 50px;
   padding-top: 50px;
 }
 
@@ -505,7 +505,7 @@ time {
 ========================================
 */
 #conceptVisual {
-  height: 880px;
+  height: 100vh;
   width: 100vw;
   background-image: url(../images/conceptVs.jpg);
   background-size: cover;
@@ -836,13 +836,13 @@ time {
 }
 
 #storeInfo {
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-items: stretch;
 }
 
 #storeInfo .map {
-  width: 55%;
+  width: 80%;
   position: relative;
   padding-top: 55%;
   margin: 0 auto;
@@ -857,7 +857,8 @@ time {
 }
 
 #storeInfo #accessDtl {
-  margin-top: 0;
+  width: 80%;
+  margin: 30px auto;
   padding-left: 0px;
 }
 
