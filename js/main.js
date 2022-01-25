@@ -8,7 +8,7 @@ $(function () {
         $header = $('header, header a, header .headerLogo a, .nav_toggle i');
     const $headerOffsetTop = $('body').offset().top;
 
-// トップへ戻るボタンのスムーズスクロール
+// 【トップへ戻るボタンのスムーズスクロール設定】
     $('a[href^="#"]').click(function(){
         let href= $(this).attr("href");
         let target = $(href == "#" || href == "" ? 'html' : href);
